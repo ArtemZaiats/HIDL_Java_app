@@ -1,0 +1,23 @@
+android_app {
+    name: "AidlTestApp",
+
+    srcs: ["app/src/main/java/**/*.java"],
+
+
+    resource_dirs: ["app/src/main/res"],
+    manifest: "app/src/main/AndroidManifest.xml",
+
+	privileged: true,
+    certificate: "platform",
+    platform_apis: true,
+
+    static_libs: [
+        "android-support-v7-appcompat",
+        "android-support-constraint-layout",
+    ],
+
+    libs: [
+		"android.hardware.vibrator-V1.0-java",
+        "android.hidl.base-V1.0-java",
+    ],
+}
